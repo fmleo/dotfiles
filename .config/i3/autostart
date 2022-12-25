@@ -8,3 +8,6 @@ exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id $term --class cmus --command cmus
 for_window [class="cmus"] move scratchpad
+
+exec --no-startup-id $term --class ranger --command ranger
+for_window [class="ranger"] move scratchpad

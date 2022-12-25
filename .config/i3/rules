@@ -1,0 +1,10 @@
+for_window [title="Picture-in-Picture"] sticky enable
+
+for_window [all] border pixel 0
+
+gaps inner 6
+gaps outer 3
+smart_gaps on
+
+for_window [class="discord"] move container to workspace $WS10
+for_window [class="telegram-desktop"] move container to workspace $WS10

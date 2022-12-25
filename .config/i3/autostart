@@ -1,0 +1,10 @@
+exec_always --no-startup-id dunst
+
+exec --no-startup-id discordrp-mpris
+exec --no-startup-id klipper
+exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000 && systemctl suspend'
+
+exec --no-startup-id nitrogen --restore
+
+exec --no-startup-id $term --class cmus --command cmus
+for_window [class="cmus"] move scratchpad

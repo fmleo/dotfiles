@@ -71,9 +71,9 @@ set $yellowbrown        #e1b700
 
 # define colors for windows:
 #class                          border          bground         text            indicator       child_border
-client.focused                  $purple         $darkgray       $white          $mediumgrey     $transparent
-client.unfocused                $lightgray      $darkgray       $grey           $darkgrey       $transparent
-client.focused_inactive         $lightgray      $darkgray       $grey           $black          $transparent
+client.focused                  $purple         $darkgray       $white          $mediumgrey     $purple
+client.unfocused                $purple         $darkgray       $grey           $darkgrey       $purple
+client.focused_inactive         $purple         $darkgray       $grey           $black          $purple
 client.urgent                   $red            $red            $white          $yellowbrown    $yellowbrown
 
 bar {
@@ -88,9 +88,9 @@ bar {
 
 #                               border                  bg              txt             indicator
         focused_workspace       $purple                 $purple         $darkgray       $purple
-        active_workspace        $purple                 $darkgray       $white          $purple
-        inactive_workspace      $lightgray              $darkgray       $grey           $purple
-        urgent_workspace        $urgentred              $urgentred      $white          $purple
+        active_workspace        $lightgray              $darkgray       $white          $lightgray
+        inactive_workspace      $lightgray              $darkgray       $grey           $lightgray
+        urgent_workspace        $urgentred              $urgentred      $white          $yellowbrown
 
         }
 }

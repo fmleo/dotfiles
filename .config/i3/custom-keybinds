@@ -1,6 +1,10 @@
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
+bindsym $mod+Shift+Return exec --no-startup-id $term --command /usr/bin/fish --private
+
+bindsym $mod+i exec --no-startup-id xcolor -s
+
 bindsym Print exec flameshot gui
 
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -47,5 +51,5 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 
-bindsym $mod+M [class="cmus"] scratchpad show
+bindsym $mod+M [class="MusicPlayer"] scratchpad show
 bindsym $mod+N [class="ranger"] scratchpad show

@@ -1,13 +1,19 @@
+exec_always --no-startup-id picom -CGb
 exec_always --no-startup-id dunst
+exec --no-startup-id redshift
+
+exec --no-startup-id wal -R
 
 exec --no-startup-id discordrp-mpris
 exec --no-startup-id klipper
 exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000 && systemctl suspend'
+exec --no-startup-id xautolock -time 60 -locker 'systemctl hibernate'
 
 exec --no-startup-id nitrogen --restore
 
-exec --no-startup-id $term --class cmus --command cmus
-for_window [class="cmus"] move scratchpad
+exec --no-startup-id $term --class MusicPlayer --command ncmpcpp
+for_window [class="MusicPlayer"] move scratchpad
 
 exec --no-startup-id $term --class ranger --command ranger
 for_window [class="ranger"] move scratchpad
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=ncmpcpp
+Icon=utilities-terminal
+Exec=alacritty --class "MusicPlayer" --command ncmpcpp
+
+

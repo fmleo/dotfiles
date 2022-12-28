@@ -56,24 +56,30 @@ focus_follows_mouse no
 set $transparent        #00000000
 set $darkgray           #282c34
 set $lightgray          #abb2bf
-set $lightblue          #61afef
 set $urgentred          #e53935
-set $white              #ffffff
-set $black              #000000
-set $purple             #c678dd
-set $red                #e06c75
-set $green              #98c379
-set $yellow             #e5c07b
-set $cyan               #56b6c2
 set $grey               #b0b5bd
 set $mediumgrey         #8b8b8b
 set $yellowbrown        #e1b700
 
+set $white              #ffffff
+set $black              #000000
+
+set_from_resource $bg                 i3wm.background #151f29  
+set_from_resource $fg                 i3wm.foreground #fafafa  
+
+
+set_from_resource $red                i3wm.color1 #e06c75
+set_from_resource $green              i3wm.color2 #98c379
+set_from_resource $yellow             i3wm.color3 #e5c07b
+set_from_resource $blue               i3wm.color4 #61afef
+set_from_resource $magenta            i3wm.color5 #c67800
+set_from_resource $cyan               i3wm.color6 #56b6c2
+
 # define colors for windows:
 #class                          border          bground         text            indicator       child_border
-client.focused                  $purple         $darkgray       $white          $mediumgrey     $purple
-client.unfocused                $purple         $darkgray       $grey           $darkgrey       $purple
-client.focused_inactive         $purple         $darkgray       $grey           $black          $purple
+client.focused                  $magenta        $darkgray       $white          $mediumgrey     $magenta
+client.unfocused                $magenta        $darkgray       $grey           $darkgrey       $magenta
+client.focused_inactive         $magenta        $darkgray       $grey           $black          $magenta
 client.urgent                   $red            $red            $white          $yellowbrown    $yellowbrown
 
 bar {
@@ -82,15 +88,15 @@ bar {
         tray_output primary
 
         colors {
-                separator          $purple
-                background         $darkgray
-                statusline         $white
+                separator          $magenta
+                background         $bg
+                statusline         $fg
 
 #                               border                  bg              txt             indicator
-        focused_workspace       $purple                 $purple         $darkgray       $purple
-        active_workspace        $lightgray              $darkgray       $white          $lightgray
-        inactive_workspace      $lightgray              $darkgray       $grey           $lightgray
-        urgent_workspace        $urgentred              $urgentred      $white          $yellowbrown
+        focused_workspace       $magenta                $magenta        $bg             $magenta
+        active_workspace        $lightgray              $bg             $fg             $lightgray
+        inactive_workspace      $lightgray              $bg             $grey           $lightgray
+        urgent_workspace        $urgentred              $urgentred      $fg             $yellowbrown
 
         }
 }

@@ -53,3 +53,4 @@ bindsym $mod+Shift+less move workspace to output left
 
 bindsym $mod+M [class="MusicPlayer"] scratchpad show
 bindsym $mod+N [class="ranger"] scratchpad show
+bindsym $mod+B [class="btop"] scratchpad show

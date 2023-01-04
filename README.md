@@ -27,7 +27,6 @@ it is also not guaranteed that anything on here is gonna work so please make sur
 * pywal
 ---
 * playerctl
-* mpd + ncmpcpp + mpdscribble 
-* [mpd-mpris](https://aur.archlinux.org/packages/mpd-mpris)
+* cmus
 ---
 * yadm

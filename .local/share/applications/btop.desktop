@@ -6,6 +6,6 @@ GenericName=Process Viewer
 Comment=Show System Processes
 Icon=btop
 Exec=alacritty --class "btop" --command "btop"
-Terminal=true
+Terminal=false
 Categories=System;Monitor;ConsoleOnly;
 Keywords=system;process;task

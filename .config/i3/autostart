@@ -11,10 +11,12 @@ exec --no-startup-id xautolock -time 60 -locker 'systemctl hibernate'
 
 exec --no-startup-id nitrogen --restore
 
-exec --no-startup-id $term --class MusicPlayer --command ncmpcpp
+#exec --no-startup-id $term --class MusicPlayer --command ncmpcpp
+exec --no-startup-id $term --class MusicPlayer --command cmus
 for_window [class="MusicPlayer"] move scratchpad
 
 exec --no-startup-id $term --class ranger --command ranger
 for_window [class="ranger"] move scratchpad
 
-exec --no-startup-id /usr/bin/mpd-mpris
+#exec --no-startup-id /usr/bin/mpd-mpris
+#exec --no-startup-id /usr/bin/mpdscribble

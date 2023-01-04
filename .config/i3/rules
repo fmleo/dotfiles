@@ -12,3 +12,5 @@ for_window [class="discord"] move container to workspace $WS10
 for_window [class="telegram-desktop"] move container to workspace $WS10
 
 for_window [class="ranger"] resize set 1000 px 600 px
+
+for_window [class="Pavucontrol"] floating enable

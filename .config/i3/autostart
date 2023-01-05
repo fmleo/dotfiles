@@ -9,7 +9,7 @@ exec --no-startup-id klipper
 exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000 && systemctl suspend'
 exec --no-startup-id xautolock -time 60 -locker 'systemctl hibernate'
 
-exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id nitrogen --restore
 
 #exec --no-startup-id $term --class MusicPlayer --command ncmpcpp
 exec --no-startup-id $term --class MusicPlayer --command cmus

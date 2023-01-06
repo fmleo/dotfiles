@@ -82,23 +82,23 @@ client.unfocused                $magenta        $darkgray       $grey           
 client.focused_inactive         $magenta        $darkgray       $grey           $black          $magenta
 client.urgent                   $red            $red            $white          $yellowbrown    $yellowbrown
 
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-
-        tray_output primary
-
-        colors {
-                separator          $magenta
-                background         $bg
-                statusline         $fg
-
+#bar {
+#        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#
+#        tray_output primary
+#
+#        colors {
+#                separator          $magenta
+#                background         $bg
+#                statusline         $fg
+#
 #                               border                  bg              txt             indicator
-        focused_workspace       $magenta                $magenta        $bg             $magenta
-        active_workspace        $lightgray              $bg             $fg             $lightgray
-        inactive_workspace      $lightgray              $bg             $grey           $lightgray
-        urgent_workspace        $urgentred              $urgentred      $fg             $yellowbrown
-
-        }
-}
+#        focused_workspace       $magenta                $magenta        $bg             $magenta
+#        active_workspace        $lightgray              $bg             $fg             $lightgray
+#        inactive_workspace      $lightgray              $bg             $grey           $lightgray
+#        urgent_workspace        $urgentred              $urgentred      $fg             $yellowbrown
+#
+#        }
+#}
 
 set $WS10 messaging

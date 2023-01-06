@@ -9,11 +9,11 @@ it is also not guaranteed that anything on here is gonna work so please make sur
 
 ## software:
 * i3-gaps
-* i3bar
 * xbacklight
 * i3lock
 * xautolock
 * rofi
+* polybar
 ---
 * dunst
 * flameshot

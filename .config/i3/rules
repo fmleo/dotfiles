@@ -1,5 +1,7 @@
 for_window [title="Picture-in-Picture"] sticky enable
 
+for_window [class="pavucontrol"] floating enable
+
 for_window [tiling] border pixel 0
 
 for_window [floating] border pixel 0

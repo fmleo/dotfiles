@@ -2,11 +2,18 @@ exec_always --no-startup-id picom -CGb
 exec_always --no-startup-id pkill dunst; dunst -config ~/.cache/wal/dunstrc
 exec --no-startup-id redshift
 
+exec --no-startup-id eos-update-notifier -init
+
 exec --no-startup-id autotiling
 
-exec --no-startup-id wal -R
+exec --no-startup-id nm-applet
+exec --no-startup-id pasystray
+exec --no-startup-id flameshot
 
-exec --no-startup-id discordrp-mpris
+exec --no-startup-id wal -R
+exec --no-startup-id nitrogen --restore
+
+#exec --no-startup-id discordrp-mpris
 exec --no-startup-id klipper
 exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000 && systemctl suspend'
 exec --no-startup-id xautolock -time 60 -locker 'systemctl hibernate'

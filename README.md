@@ -11,25 +11,22 @@ it is also not guaranteed that anything on here is gonna work so please make sur
 ---
 
 ## software:
-* i3-gaps
-* xbacklight
-* i3lock
-* xautolock
-* rofi
-* polybar
+* swayfx
+* swaylock
+* wofi
+* waybar
 ---
 * dunst
-* flameshot
-* nitrogen
+* grimshot
 ---
 * alacritty
 * fish + fisher
+* vscode
 ---
-* picom
-* redshift
 * pywal
 ---
 * playerctl
 * cmus
+* spotify + spicetify
 ---
 * yadm

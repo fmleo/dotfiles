@@ -1,0 +1,21 @@
+# Initial Setup 
+exec ~/set_once.sh
+
+# Config for sway
+#
+# Read `man 5 sway` for a complete reference.
+
+# user config directory
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Your preferred terminal emulators
+set $term alacritty
+
+include "$HOME/.cache/wal/colors-sway"
+
+include $HOME/.config/sway/config.d/*
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable

@@ -1,0 +1,36 @@
+bindsym $mod+Shift+Return exec --no-startup-id $term --command /usr/bin/fish --private
+
+bindsym $mod+i exec --no-startup-id xcolor -s
+
+bindsym Print exec grimshot copy area
+bindsym Shift+Print exec grimshot save area ~/Pictures/screenshots/$(date "+%Y%m%d-%H%M%S").png
+bindsym Ctrl+Shift+Print exec grimshot save output ~/Pictures/screenshots/$(date "+%Y%m%d-%H%M%S").png
+
+
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+
+#set $display_mode [D]uplicate, [L]eft, [R]#ight, e[X]clude
+#mode "$display_mode" {
+#        bindsym d exec xrandr --output HDMI1 --auto --same-as eDPp1
+#        bindsym l exec xrandr --output HDMI1 --auto --left-of eDP1
+#        bindsym r exec xrandr --output HDMI1 --auto --right-of eDP1
+#        bindsym x exec xrandr --output HDMI1 --off
+
+        # back to normal: Enter or Escape or $mod+r
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#        bindsym $mod+r mode "default"
+#}
+
+#bindsym $mod+p mode "$display_mode"
+
+bindsym $mod+Shift+Escape exec ksysguard
+
+
+bindsym $mod+M [app_id="MusicPlayer"] scratchpad show
+bindsym $mod+N [app_id="ranger"] scratchpad show
+bindsym $mod+B [app_id="btop"] scratchpad show

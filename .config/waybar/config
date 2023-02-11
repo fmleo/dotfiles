@@ -1,0 +1,116 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-bottom": 10,
+  "height": 30,
+  "spacing": 10,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "mpris",
+    "idle_inhibitor",
+    "pulseaudio",
+    "battery",
+    "backlight",
+    "clock",
+    "custom/power",
+    "tray"
+  ],
+  "idle_inhibitor": {
+    "format": "{icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "clock": {
+    "interval": 10,
+    "format-alt": " {:%d/%m/%Y %H:%M:%S}",
+    "format": "{:%d/%m %H:%M}",
+    "tooltip-format": "{:%e %B %Y}"
+  },
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": false
+  },
+  "sway/window": {
+    "format": "{}",
+    "max-length": 120
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "disable-markup": false,
+    "all-outputs": false,
+    "format": "  {icon}  "
+  },
+  "mpris": {
+    "format": "{artist} - {title}",
+    "status_icons": {
+      "playing": "",
+      "paused": ""
+    },
+    "on-right-click": "",
+    "on-middle-click": "",
+    "ignored-players": [
+      "firefox"
+    ]
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}  {format_source}",
+    "format-bluetooth-muted": " {icon}  {format_source}",
+    "format-muted": "婢 {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "וֹ",
+      "headset": "  ",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        ""
+      ]
+    },
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pamixer -ui 2",
+    "on-scroll-down": "pamixer -ud 2"
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  },
+  "backlight": {
+    "format": "{percent}% ",
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%"
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  }
+}

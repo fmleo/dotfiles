@@ -1,0 +1,120 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "custom/launcher",
+    "sway/workspaces",
+    "sway/mode",
+    "custom/media",
+    "tray"
+  ],
+  "modules-center": [
+    "wlr/workspaces"
+  ],
+  "modules-right": [
+    "custom/keyboard_backlight",
+    "backlight",
+    "custom/pipewire",
+    "clock",
+    "battery",
+    "custom/power"
+  ],
+  "custom/pipewire": {
+    "format": "{icon} {percentage}%",
+    "return-type": "json",
+    "interval": 1,
+    "format-icons": {
+      "mute": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "exec": "pw-volume status",
+    "on-click": "pw-volume mute toggle",
+    "on-scroll-up": "pw-volume change +5%",
+    "on-scroll-down": "pw-volume change -5%"
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": " {essid}",
+    "format-ethernet": ""
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": " {}%",
+    "interval": 1,
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5"
+  },
+  "custom/keyboard_backlight": {
+    "format": " {}%",
+    "signal": 7,
+    "interval": 1,
+    "exec": "light -s 'sysfs/leds/apple::kbd_backlight' -G | jq"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "clock": {
+    "format": "{: %Y-%m-%d  %I:%M:%S %p}",
+    "interval": 1
+  },
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}G/{total:0.1f}G",
+    "max-length": 30
+  },
+  "custom/media": {
+    "interval": 30,
+    "signal": 7,
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 20,
+    "format-icons": {
+      "spotify": " ",
+      "default": " "
+    },
+    "escape": true,
+    "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "on-click-right": "killall wofi"
+  },
+  "custom/mullvad": {
+    "exec": "mullvad status",
+    "interval": 5,
+    "format": ""
+  },
+  "custom/power": {
+    "format": " Quit",
+    "on-click": "bash ~/.config/rofi/leave/leave.sh"
+  }
+}

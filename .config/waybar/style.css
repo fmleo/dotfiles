@@ -14,7 +14,9 @@
 #idle_inhibitor,
 #pulseaudio,
 #backlight,
-#mpris {
+#mpris,
+#custom-power,
+#custom-grimshot {
     color: #161320;
     margin-left: 8px;
     padding-left: 10px;
@@ -104,11 +106,11 @@ window#waybar.hidden {
 }
 
 #mpris {
-    background: #f697ff
+    background: #f697ff;
 }
 
 #idle_inhibitor {
-    background: #a197ff;
+    background: #c497ff;
 }
 
 #pulseaudio {
@@ -117,7 +119,7 @@ window#waybar.hidden {
 }
 
 #battery {
-    background: #97ffe5;
+    background: #97fff1;
     padding-right: 16px;
 }
 
@@ -154,33 +156,16 @@ window#waybar.hidden {
     background: #ffef97;
 }
 
-
-
-#custom-launcher {
-    font-size: 24px;
-    margin-top: 6px;
-    margin-left: 6px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 50%;
-    transition: none;
-    color: #89DCEB;
-    background: #161320;
+#custom-power {
+    background: #ffb897;
 }
+
+#custom-grimshot {
+    background: #ff9797;
+    padding-right: 14px;
+}
+
 
 #tray {
     background: @background;
-}
-
-#custom-power {
-    /* font-size: 20px; */
-    margin-left: 8px;
-    margin-right: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: #161320;
-    background: #ff9797;
 }

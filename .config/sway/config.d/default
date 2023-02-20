@@ -18,8 +18,7 @@ set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-sourc
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -c ~/.config/wofi/config -I
-
+set $menu rofi -modi drun -show drun -config ~/.config/rofi/config.rasi
 set $powermenu ~/.config/waybar/scripts/power-menu.sh
 
 ### Idle configuration
@@ -33,7 +32,7 @@ exec swayidle -w\
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ## Lock Screen
-    bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
+    bindsym $mod+L exec ~/.config/sway/scripts/lockman.sh
 
 ### Key bindings
 #
@@ -63,7 +62,6 @@ exec swayidle -w\
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
-    bindsym $mod+Shift+r restart
 
 #
 # Moving around:

@@ -2,9 +2,9 @@ bindsym $mod+Shift+Return exec --no-startup-id $term --command /usr/bin/fish --p
 
 bindsym $mod+i exec --no-startup-id xcolor -s
 
-bindsym Print exec grimshot copy area
-bindsym Shift+Print exec grimshot save area ~/Pictures/screenshots/$(date "+%Y%m%d-%H%M%S").png
-bindsym Ctrl+Shift+Print exec grimshot save output ~/Pictures/screenshots/$(date "+%Y%m%d-%H%M%S").png
+bindsym Print exec grimshot --notify save area - | swappy -f -
+bindsym Shift+Print exec grimshot --notify save output - | swappy -f -
+bindsym Ctrl+Shift+Print exec grimshot --notify save window - | swappy -f -
 
 
 

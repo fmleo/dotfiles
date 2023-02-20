@@ -19,6 +19,7 @@
     "backlight",
     "clock",
     "custom/power",
+    "custom/grimshot",
     "tray"
   ],
   "idle_inhibitor": {
@@ -99,10 +100,6 @@
     "on-scroll-up": "pamixer -ui 2",
     "on-scroll-down": "pamixer -ud 2"
   },
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10
-  },
   "backlight": {
     "format": "{percent}% ",
     "on-scroll-down": "brightnessctl -c backlight set 1%-",
@@ -112,5 +109,16 @@
     "format": "⏻",
     "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
     "tooltip": false
+  },
+  "custom/grimshot": { 
+    "format": "", 
+  "tooltip": false, 
+  "on-click": "grimshot --notify save area - | swappy -f -",
+  "on-click-middle": "grimshot --notify save output - | swappy -f -", 
+  "on-click-right": "grimshot --notify save window - | swappy -f -"
+},
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
   }
 }

@@ -5,7 +5,7 @@ i'll make sure to always keep them updated but it's not guaranteed
 
 it is also not guaranteed that anything on here is gonna work so please make sure you know what you're doing
 
-![two monitor screenshot, with discord on the left, neofetch pipes.sh and cava on the right, green wallpaper](https://raw.githubusercontent.com/fmleo/dotfiles/main/rice%20two%20final%20real.png "owo")
+![screenshot showing 4 screens, from left to right, top to bottom there is a window showing discord, firefox spotify and 3 terminals, one showing neofetch, the others running cava and pipes.sh](https://raw.githubusercontent.com/fmleo/dotfiles/main/rice%203%20swayfx%20edition.png "owo")
 
 
 ---
@@ -13,11 +13,12 @@ it is also not guaranteed that anything on here is gonna work so please make sur
 ## software:
 * swayfx
 * swaylock
-* wofi
+* rofi
 * waybar
 ---
 * dunst
 * grimshot
+* swappy
 ---
 * alacritty
 * fish + fisher

@@ -1,12 +1,10 @@
 bindsym $mod+Shift+Return exec --no-startup-id $term --command /usr/bin/fish --private
 
-bindsym $mod+i exec --no-startup-id xcolor -s
+bindsym $mod+i exec ~/.config/sway/scripts/colorpicker.fish
 
 bindsym Print exec grimshot --notify save area - | swappy -f -
 bindsym Shift+Print exec grimshot --notify save output - | swappy -f -
 bindsym Ctrl+Shift+Print exec grimshot --notify save window - | swappy -f -
-
-
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next

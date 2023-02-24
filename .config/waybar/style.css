@@ -3,7 +3,7 @@
 * {
     border: none;
     border-radius: 10;
-    font-family: "Jetbrains Mono", "Hack Nerd Font";
+    font-family: "monospace", "Hack Nerd Font";
     font-size: 12px;
     min-height: 18px;
 }

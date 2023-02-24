@@ -114,7 +114,7 @@
     "format": "", 
   "tooltip": false, 
   "on-click": "grimshot --notify save area - | swappy -f -",
-  "on-click-middle": "grimshot --notify save output - | swappy -f -", 
+  "on-click-middle": "grimshot --notify save screen - | swappy -f -", 
   "on-click-right": "grimshot --notify save window - | swappy -f -"
 },
   "tray": {

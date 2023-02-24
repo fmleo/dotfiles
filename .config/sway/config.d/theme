@@ -14,7 +14,7 @@ default_border pixel 1
 corner_radius 10
 
 # Default Font
-font pango:JetBrainsMono Nerd Font Bold 9
+font pango:monospace 9
 
 # Thin borders:
 smart_borders off

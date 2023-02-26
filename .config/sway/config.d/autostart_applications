@@ -17,8 +17,11 @@ exec --no-startup-id autotiling
       
 exec --no-startup-id wal -R
 
-exec $term --class ranger --command ranger
+exec kitty --class ranger ranger
 for_window [app_id="ranger"] move scratchpad
 
 exec $term --class btop --command btop
 for_window [app_id="btop"] move scratchpad
+
+exec $term --class MusicPlayer --command cmus
+for_window [app_id="MusicPlayer"] move scratchpad

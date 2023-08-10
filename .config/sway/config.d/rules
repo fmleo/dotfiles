@@ -2,12 +2,8 @@ for_window [title="Picture-in-Picture"] sticky enable
 
 for_window [app_id="pavucontrol"] floating enable
 
-for_window [tiling] border pixel 0
-
-for_window [floating] border pixel 0
-
-for_window [app_id="discord"] move container to workspace 10
-for_window [app_id="telegram-desktop"] move container to workspace 10
+assign [app_id="discord"] workspace 10
+assign [app_id="org.telegram.desktop"] workspace 10
 
 for_window [app_id="ranger"] resize set 1000 px 600 px
 for_window [app_id="btop"] resize set 1100 px 600 px

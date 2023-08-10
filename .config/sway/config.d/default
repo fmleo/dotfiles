@@ -18,7 +18,7 @@ set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-sourc
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -modi drun -show drun -config ~/.config/rofi/config.rasi
+set $menu tofi-drun -c .cache/wal/tofi-config | xargs swaymsg exec --
 set $powermenu ~/.config/waybar/scripts/power-menu.sh
 
 ### Idle configuration
@@ -126,7 +126,7 @@ exec swayidle -w\
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    bindsym $mod+s sticky enable
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
@@ -148,11 +148,11 @@ exec swayidle -w\
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    #bindsym $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    #bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #

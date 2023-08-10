@@ -2,10 +2,13 @@
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # notifications
-exec_always --no-startup-id pkill dunst; dunst -config ~/.cache/wal/dunstrc
-
+exec --no-startup-id swaync 
+exec_always swaync-client --reload-config
 # Network Applet
 exec nm-applet --indicator
+
+# mullvad
+exec /usr/bin/mullvad-vpn
 
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -17,11 +20,13 @@ exec --no-startup-id autotiling
       
 exec --no-startup-id wal -R
 
+exec_always gammastep
+
 exec kitty --class ranger ranger
 for_window [app_id="ranger"] move scratchpad
 
-exec $term --class btop --command btop
+exec $term --class btop btop
 for_window [app_id="btop"] move scratchpad
 
-exec $term --class MusicPlayer --command cmus
+exec $term --class MusicPlayer cmus
 for_window [app_id="MusicPlayer"] move scratchpad

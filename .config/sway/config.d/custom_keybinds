@@ -32,3 +32,6 @@ bindsym $mod+Shift+Escape exec ksysguard
 bindsym $mod+M [app_id="MusicPlayer"] scratchpad show
 bindsym $mod+N [app_id="ranger"] scratchpad show
 bindsym $mod+B [app_id="btop"] scratchpad show
+
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next

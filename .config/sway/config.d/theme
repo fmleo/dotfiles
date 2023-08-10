@@ -7,11 +7,22 @@ gaps outer 3
 
 smart_gaps off
 
-# Hide titlebar on windows:
-default_border pixel 1
 
+default_border pixel 2
+default_floating_border normal 2
 
+# corners!
 corner_radius 10
+
+# shadows :O
+shadows on
+shadow_blur_radius 10
+shadow_color #000000ff
+
+# blur
+blur enable
+blur_passes 2
+blur_radius 2
 
 # Default Font
 font pango:monospace 9
@@ -19,25 +30,42 @@ font pango:monospace 9
 # Thin borders:
 smart_borders off
 
+scratchpad_minimize disable
+
 # Set wallpaper:
-output "*" bg ~/.config/sway/wallpaper.jpg fill
+output "*" bg "/home/leo/Pictures/Wallpapers/Konachan.com - 327415.jpg" fill
+#output "*" bg ~/Pictures/Wallpapers/ralsei.png fill
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
 # class                 border          bground         text            indicator       child_border
-client.focused          $color2         $color2         $background     $color2         $color2
+client.focused          #1e76b5         #1e76b5         $background     #1e76b5         #1e76b5
 client.focused_inactive #44475A         #44475A         $foreground     #44475A         #44475A
 client.unfocused        $background     $background     $foreground     $background     $background
-client.urgent           $color1         $color1         $foreground     $color1         $color1
+client.urgent           $color4         $color4         $foreground     $color4         $color4
 client.placeholder      $background     $background     $foreground     $background     $background
 client.background       #F8F8F2
 
-#
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+#bar {
+#    position bottom
+#    status_command /usr/bin/i3status-rs /home/leo/.config/i3status-rust/config.toml
+
+#   colors {
+#    	background $background
+		#			border		background	text
+#       focused_workspace 	$color2 	$color2 	$background
+#        active_workspace 	$background 	$background 	#ffffff
+#        inactive_workspace 	$background 	$background 	#888888
+#        urgent_workspace 	$color1 	$color1 	#ffffff
+#    }
+#}
+
 bar {
-    swaybar_command waybar
+	swaybar_command waybar
 }
+

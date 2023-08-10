@@ -4,15 +4,16 @@
   "margin-left": 10,
   "margin-right": 10,
   "margin-bottom": 10,
-  "height": 30,
-  "spacing": 10,
+"height": 30,
+  "spacing": 5,
   "modules-left": [
-    "sway/workspaces",
-    "sway/mode"
+   "sway/workspaces",
+   "sway/mode",
+   "sway/window"
   ],
   "modules-center": [],
   "modules-right": [
-    "mpris",
+//    "mpris",
     "idle_inhibitor",
     "pulseaudio",
     "battery",
@@ -20,6 +21,7 @@
     "clock",
     "custom/power",
     "custom/grimshot",
+    "custom/notification",
     "tray"
   ],
   "idle_inhibitor": {
@@ -35,7 +37,7 @@
       "critical": 15
     },
     "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% 󰃨",
     "format-plugged": "{capacity}% ",
     "format-icons": [
       "",
@@ -43,27 +45,34 @@
       "",
       "",
       ""
-    ]
+    ],
+    "on-click": "~/.config/sway/scripts/tofi-ppctl.sh"
   },
   "clock": {
     "interval": 10,
-    "format-alt": " {:%d/%m/%Y %H:%M:%S}",
+    "format-alt": "{:%d/%m/%Y %H:%M:%S}",
     "format": "{:%d/%m %H:%M}",
-    "tooltip-format": "{:%e %B %Y}"
-  },
-  "sway/mode": {
-    "format": "{}",
-    "tooltip": false
-  },
-  "sway/window": {
-    "format": "{}",
-    "max-length": 120
+    "tooltip-format": "{:%e %B %Y}",
+    "on-click-right": "gsimplecal"
   },
   "sway/workspaces": {
     "disable-scroll": true,
     "disable-markup": false,
     "all-outputs": false,
     "format": "  {icon}  "
+  },
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": false
+  },
+  "sway/window": {
+     "format": "{}",
+     "max-length": 120
+  },
+  "wlr/workspaces": {
+    "all-outputs": false,
+    "on-click": "activate",
+    "sort-by-number": true
   },
   "mpris": {
     "format": "{artist} - {title}",
@@ -75,20 +84,21 @@
     "on-middle-click": "",
     "ignored-players": [
       "firefox"
-    ]
+    ],
+    "max-length": 2
   },
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon}  {format_source}",
-    "format-bluetooth-muted": " {icon}  {format_source}",
-    "format-muted": "婢 {format_source}",
+    "format-bluetooth-muted": "󰋋 {icon}  {format_source}",
+    "format-muted": "󰋋 {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "וֹ",
-      "headset": "  ",
+      "headphone": "󰋋",
+      "hands-free": "󰋎",
+      "headset": " 󰋎 ",
       "phone": "",
       "portable": "",
       "car": "",
@@ -111,12 +121,32 @@
     "tooltip": false
   },
   "custom/grimshot": { 
-    "format": "", 
+    "format": "󰹑", 
   "tooltip": false, 
   "on-click": "grimshot --notify save area - | swappy -f -",
   "on-click-middle": "grimshot --notify save screen - | swappy -f -", 
   "on-click-right": "grimshot --notify save window - | swappy -f -"
-},
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
   "tray": {
     "icon-size": 14,
     "spacing": 10

@@ -2,11 +2,16 @@
 
 * {
     border: none;
-    border-radius: 10;
-    font-family: "monospace", "Hack Nerd Font";
+    /* border-radius: 10; */
+    font-family: "Symbols Nerd Font", "monospace";
     font-size: 12px;
     min-height: 18px;
 }
+
+.bold {
+    font-weight: 500;
+}
+
 
 #clock,
 #battery,
@@ -16,9 +21,11 @@
 #backlight,
 #mpris,
 #custom-power,
-#custom-grimshot {
-    color: #161320;
-    margin-left: 8px;
+#custom-grimshot,
+#custom-notification {
+    color: @foreground;
+    background: @background;
+    margin-left: 0px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
@@ -39,7 +46,18 @@ window#waybar.hidden {
     padding-right: 10px;
     border-radius: 10px;
     transition: none;
-    color: transparent;
+    color: @foreground;
+    background: @background;
+}
+
+window#waybar.empty {
+    background: transparent;
+}
+
+window#waybar.empty #window {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
     background: transparent;
 }
 
@@ -99,37 +117,53 @@ window#waybar.hidden {
     font-size: 4px;
 }
 
-
-#mode {
-    background: @color4;
-    padding: 0 10px;
+#window {
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            #FCF434,
+            #FCF434 25%,
+            #FFFFFF 25%,
+            #FFFFFF 50%,
+            #9C59D1 50%,
+            #9C59D1 75%,
+            #2C2C2C 75%,
+            #2C2C2C
+            ); 
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 #mpris {
-    background: #f697ff;
+    background-color: @background;
+    color: #ffef97;
+    border: 2px solid #ffef97;
 }
 
 #idle_inhibitor {
-    background: #c497ff;
+    background-color: @background;
+    color: #f697ff;
+    border: 2px solid #f697ff;
 }
 
 #pulseaudio {
-    background: #97c4ff;
-    padding-right: 12px;
+    background-color: @background;
+    color: #c497ff;
+    border: 2px solid #c497ff;
+    /* padding-right: 12px; */
 }
 
 #battery {
-    background: #97fff1;
-    padding-right: 16px;
+    background-color: @background;
+    color: #97c4ff;
+    border: 2px solid #97c4ff;
+    /* padding-right: 16px; */
 }
 
 #battery.warning {
     background-color: #fff677;
-}
-
-#battery.charging,
-#battery.plugged {
-    color: #161320;
+    color: @background;
 }
 
 #battery.critical:not(.charging) {
@@ -148,24 +182,57 @@ window#waybar.hidden {
 }
 
 #backlight {
-    background: #97ffa0;
-    padding-right: 12px;
+    background-color: @background;
+    color: #97fff1;
+    border: 2px solid #97fff1;
+    /* padding-right: 12px; */
 }
 
 #clock {
-    background: #ffef97;
+    background-color: @background;
+    color: #97ffa0;
+    border: 2px solid #97ffa0;
 }
 
 #custom-power {
-    background: #ffb897;
+    background-color: @background;
+    color: #ffef97;
+    border: 2px solid #ffef97;
 }
 
 #custom-grimshot {
-    background: #ff9797;
-    padding-right: 14px;
+    background-color: @background;
+    color: #ffb897;
+    border: 2px solid #ffb897;
+    /* padding-right: 14px; */
+}
+
+#custom-notification {
+    background-color: @background;
+    color: #ff9797;
+    border: 2px solid #ff9797;
 }
 
 
 #tray {
-    background: @background;
+    /* background-color: #ff8282; */
+    padding-right: 10px;
+
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            #5BCEFA,
+            #5BCEFA 20%,
+            #F5A9B8 20%,
+            #F5A9B8 40%,
+            #FFFFFF 40%,
+            #FFFFFF 60%,
+            #F5A9B8 60%,
+            #F5A9B8 80%,
+            #5BCEFA 80%,
+            #5BCEFA
+            ); 
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }

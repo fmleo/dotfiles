@@ -9,7 +9,11 @@ input type:touchpad {
     tap enabled
     natural_scroll enabled
     accel_profile "flat"
-    pointer_accel 1
+    pointer_accel 0.5
+}
+
+input type:mouse {
+    pointer_accel 0.3
 }
 
 # Read `man 5 sway-input` for more information about this section.
@@ -17,6 +21,11 @@ input type:touchpad {
 input type:keyboard {
     xkb_layout br(thinkpad)
 }
+
+input "6700:39936:SEMICO___USB_Gaming_Keyboard" {
+   xkb_layout us
+}
+
 exec_always {
     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
     'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'

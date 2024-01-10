@@ -1,2 +1,9 @@
 #!/usr/bin/fish
-grim -g "$(slurp -p)" - -t png -o | convert png:- -format '%[pixel:s]\n' info:- | awk -F '[(,)]' '{printf("%02x%02x%02x\n",$2,$3,$4)}' | wl-copy --
+set position $(slurp -b 00000000)
+set color $(grim -g "$position" -t png - \
+        | convert - -format '%[pixel:p{0,0}]' txt:- \
+        | tail -n 1 \
+        | cut -d ' ' -f 4
+)
+
+echo $color

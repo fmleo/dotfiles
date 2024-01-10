@@ -14,9 +14,11 @@ exec /usr/bin/mullvad-vpn
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-    
 
-exec --no-startup-id autotiling
+
+exec /usr/lib/xdg-desktop-portal -r
+
+#exec --no-startup-id autotiling-rs
       
 exec --no-startup-id wal -R
 

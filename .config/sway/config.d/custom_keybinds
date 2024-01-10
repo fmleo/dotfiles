@@ -1,6 +1,7 @@
 bindsym $mod+Shift+Return exec --no-startup-id $term --command /usr/bin/fish --private
 
-bindsym $mod+i exec ~/.config/sway/scripts/colorpicker.fish
+#bindsym $mod+i exec ~/.config/sway/scripts/colorpicker.fish
+bindsym $mod+i exec wl-color-picker clipboard | sed 's/#//g'
 
 bindsym Print exec grimshot --notify save area - | swappy -f -
 bindsym Shift+Print exec grimshot --notify save output - | swappy -f -

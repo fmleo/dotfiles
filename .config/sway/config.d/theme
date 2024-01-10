@@ -17,12 +17,12 @@ corner_radius 10
 # shadows :O
 shadows on
 shadow_blur_radius 10
-shadow_color #000000ff
+shadow_color #444488ff
 
 # blur
 blur enable
-blur_passes 2
-blur_radius 2
+blur_passes 1
+blur_radius 5
 
 # Default Font
 font pango:monospace 9
@@ -32,9 +32,13 @@ smart_borders off
 
 scratchpad_minimize disable
 
+# cursor?
+seat seat0 xcursor_theme Bibata-Modern-Ice 24
+
 # Set wallpaper:
-output "*" bg "/home/leo/Pictures/Wallpapers/Konachan.com - 327415.jpg" fill
+#output "*" bg "/home/leo/Pictures/Wallpapers/Konachan.com - 327415.jpg" fill
 #output "*" bg ~/Pictures/Wallpapers/ralsei.png fill
+output "*" bg "/home/leo/Pictures/Wallpapers/scenic/Konachan.com - 343569.jpg" fill
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"

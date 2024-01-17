@@ -1,2 +1,0 @@
-vim.wo.number = true
-

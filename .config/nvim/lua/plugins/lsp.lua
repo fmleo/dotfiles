@@ -40,9 +40,10 @@ return {
             })
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-            vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
-            vim.keymap.set('n', '<leader>gr', vim.lsp.buf.code_action, {})
-            vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+            vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, { desc = "code: goto definition" })
+            vim.keymap.set('n', '<leader>cr', vim.lsp.buf.code_action, { desc = "code: show references" })
+            vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format, { desc = "code: format" })
+            vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = "code: code action" })
         end
     }
 }

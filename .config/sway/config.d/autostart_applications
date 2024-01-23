@@ -24,6 +24,8 @@ exec --no-startup-id wal -R
 
 exec_always gammastep
 
+exec_always kanshi
+
 exec kitty --class ranger ranger
 for_window [app_id="ranger"] move scratchpad
 

@@ -1,0 +1,8 @@
+profile {
+	output eDP-1 position 0,0 scale 1.2
+	output "LG Electronics LG FULL HD 0x0000BA4F" mode 1920x1080 position 1600,0
+}
+
+profile {
+	output eDP-1 scale 1
+}

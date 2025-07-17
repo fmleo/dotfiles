@@ -11,8 +11,10 @@
   "modules-right": [
     "idle_inhibitor",
     "pulseaudio",
+    {{ if eq .chezmoi.hostname "colonthree" }}
     "backlight",
     "battery",
+    {{ end }}
     "clock",
     "tray",
     "custom/power",

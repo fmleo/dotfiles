@@ -1,3 +1,11 @@
+the repo uses [chezmoi](https://www.chezmoi.io/)
+
+run the following command to apply the dotfiles (probably will override and explode everything)
+
+```sh
+chezmoi init --apply --verbose https://github.com/fmleo/dotfiles-2025.git
+```
+
 evil inconsistent dependency list (installed with pacman or paru or whatever):
 
 ```

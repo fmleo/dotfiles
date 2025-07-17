@@ -51,18 +51,20 @@
 
 /* end window */
 
-/* left base stuff */
+/* right base stuff */
 #idle_inhibitor,
 #pulseaudio,
 #clock,
 #tray,
+#backlight,
+#battery,
 #custom-power {
     font-size: 16px;
     border-radius: 1rem;
     padding: 0 1rem;
     background-color: @surface0;
 }
-/* end left base stuff */
+/* end right base stuff */
 
 /* start idle_inhibitor */
 #idle_inhibitor.activated {
@@ -76,3 +78,14 @@
 /* start clock */
 
 /* end clock */
+
+/* start battery */
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+/* end battery */
+

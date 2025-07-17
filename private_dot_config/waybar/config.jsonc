@@ -11,6 +11,8 @@
   "modules-right": [
     "idle_inhibitor",
     "pulseaudio",
+    "backlight",
+    "battery",
     "clock",
     "tray",
     "custom/power",
@@ -62,6 +64,24 @@
     },
     "on-click": "pavucontrol",
   },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""],
+    "on-scroll-down": "brightnessctl set 5%-",
+    "on-scroll-up": "brightnessctl set +5%",
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+  },
   "custom/media": {
     "format": "{icon} {text}",
     "return-type": "json",
@@ -86,3 +106,4 @@
     },
   },
 }
+

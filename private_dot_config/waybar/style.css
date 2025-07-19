@@ -15,7 +15,6 @@
 /* workspaces */
 
 #workspaces {
-    border-radius: 1rem;
     margin: 5px;
     background-color: @surface0;
     margin-left: 1rem;
@@ -23,19 +22,16 @@
 
 #workspaces button {
     color: @lavender;
-    border-radius: 1rem;
     padding: 0.5rem 1rem;
 }
 
 #workspaces button.active {
     background-color: @sky;
     color: @surface0;
-    border-radius: 1rem;
 }
 
 #workspaces button:hover {
     color: @sapphire;
-    border-radius: 1rem;
 }
 
 /* end workspaces */
@@ -44,7 +40,6 @@
 
 #window {
     font-size: 10px;
-    border-radius: 1rem;
     background-color: @mauve;
     padding: 0 1rem;
 }
@@ -60,7 +55,6 @@
 #battery,
 #custom-power {
     font-size: 16px;
-    border-radius: 1rem;
     padding: 0 1rem;
     background-color: @surface0;
 }

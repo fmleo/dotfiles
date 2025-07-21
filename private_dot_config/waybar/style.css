@@ -23,6 +23,7 @@
 #workspaces button {
     color: @lavender;
     padding: 0.5rem 1rem;
+    border-radius: 0;
 }
 
 #workspaces button.active {
@@ -83,3 +84,6 @@
 }
 /* end battery */
 
+#custom-power {
+  margin-right: 1rem;
+}

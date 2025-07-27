@@ -83,6 +83,13 @@
     "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
     "max-length": 25,
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/resources/power_profiles.xml",
+    "menu-actions": {
+        "performance": "powerprofilesctl set performance",
+        "balanced": "powerprofilesctl set balanced",
+        "power-saver": "powerprofilesctl set power-saver",
+    }
   },
   "custom/media": {
     "format": "{icon} {text}",

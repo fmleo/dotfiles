@@ -16,9 +16,10 @@ mako waybar nwg-look kvantum darkman \
 catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte kvantum-theme-catppuccin-git \
 network-manager-applet \
 xdg-desktop-portal xdg-desktop-portal-gtk \
-thunar thunar-volman thunar-archive-plugin \ 
+thunar thunar-volman thunar-archive-plugin gvfs tumbler  \ 
 ttf-nerd-fonts-symbols-mono \
-wl-clip-persist
+wl-clip-persist \
+gnome-keyring
 ```
 
 darkman scripts need to be installed with the following command

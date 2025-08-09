@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>com.mitchellh.ghostty</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1752281032034348-1</unique-id>
+	<command>ghostty --working-directory=%f</command>
+	<description>Open ghostty in the current directory</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>

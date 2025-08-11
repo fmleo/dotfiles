@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Start Waydroid Session
+Exec=waydroid session start
+Categories=X-WayDroid-App;Utility;
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=waydroid

@@ -1,2 +1,5 @@
-theme = catppuccin-frappe
+theme = dark:catppuccin-frappe,light:catppuccin-latte
 font-family = "Iosevka NF"
+
+custom-shader = "/home/leo/.config/ghostty/shaders/cursor_smear.glsl"
+custom-shader-animation = true

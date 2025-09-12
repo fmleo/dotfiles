@@ -18,7 +18,7 @@ network-manager-applet \
 xdg-desktop-portal xdg-desktop-portal-gtk \
 thunar thunar-volman thunar-archive-plugin gvfs tumbler  \ 
 ttf-nerd-fonts-symbols-mono \
-wl-clip-persist \
+wl-clip-persist cliphist \
 gnome-keyring
 ```
 

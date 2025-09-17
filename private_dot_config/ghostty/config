@@ -1,4 +1,4 @@
-theme = dark:catppuccin-frappe,light:catppuccin-latte
+theme = dark:"Catppuccin Frappe",light:"Catppuccin Latte"
 font-family = "Iosevka NF"
 
 custom-shader = "/home/leo/.config/ghostty/shaders/cursor_smear.glsl"

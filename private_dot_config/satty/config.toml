@@ -51,7 +51,7 @@ style = "Bold"
 # Custom colours for the colour palette
 [color-palette]
 # These will be shown in the toolbar for quick selection
-palette = ["#00ffff", "#a52a2a", "#dc143c", "#ff1493", "#ffd700", "#008000"]
+palette = ["#000000", "#ffffff", "#ff0000", "#00ff00", "#0000ff", "#5500ff"]
 
 # These will be available in the color picker as presets
 # Leave empty to use GTK's default

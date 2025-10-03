@@ -5,7 +5,7 @@
 }
 
 #waybar {
-    background: transparent;
+    background-color: @surface0;
     color: @text;
     margin: 5px 5px;
 }
@@ -13,7 +13,6 @@
 /* workspaces */
 
 #workspaces {
-    margin: 5px;
     background-color: @surface0;
     margin-left: 1rem;
 }
@@ -31,6 +30,11 @@
 
 #workspaces button:hover {
     color: @sapphire;
+}
+
+#workspaces button.active:hover {
+    background-color: @green;
+    color: @surface2;
 }
 
 /* end workspaces */
@@ -56,10 +60,16 @@
     font-size: 16px;
     padding: 0 1rem;
     background-color: @surface0;
+    border-left: 2px solid @overlay1;
 }
+
 /* end right base stuff */
 
 /* start idle_inhibitor */
+#idle_inhibitor {
+    padding-left: 1.5rem;
+}
+
 #idle_inhibitor.activated {
     color: @green;
 }

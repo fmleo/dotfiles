@@ -1,0 +1,103 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "icon_theme": "Catppuccin Frappé",
+  "edit_predictions": {
+    "mode": "subtle",
+    "disabled_globs": [".env"]
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "show_edit_predictions": true,
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet"
+    },
+    "enabled": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    }
+  },
+  "telemetry": {
+    "diagnostics": true
+  },
+  "vim_mode": false,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé"
+  },
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "format_on_save": "on",
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        // Default directories to search for virtual environments, relative
+        // to the current working directory. We recommend overriding this
+        // in your project's settings, rather than globally.
+        "directories": [".env", "env", ".venv", "venv"],
+        // Can also be `csh`, `fish`, and `nushell`
+        "activate_script": "fish"
+      }
+    }
+  },
+  "languages": {
+    "Go": {
+      "show_edit_predictions": false
+    },
+    "JavaScript": {
+      "show_edit_predictions": false
+    },
+    "Plain Text": {
+      "show_edit_predictions": false
+    },
+    "Python": {
+      "show_edit_predictions": true,
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "C": {
+      "show_edit_predictions": false,
+      "tab_size": 2
+    }
+  },
+
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          // Ruff server settings goes here
+          "lineLength": 88,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    },
+    "wakatime": {}
+  }
+}

@@ -17,15 +17,12 @@
   },
   "show_edit_predictions": true,
   "agent": {
-    "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
-    },
-    "enabled": true,
+    "default_profile": "ask",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    }
+      "provider": "google",
+      "model": "gemini-2.5-pro"
+    },
+    "model_parameters": []
   },
   "telemetry": {
     "diagnostics": true
@@ -67,12 +64,8 @@
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
       "formatter": [
-        {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
+        { "code_action": "source.organizeImports.ruff" },
+        { "code_action": "source.fixAll.ruff" },
         {
           "language_server": {
             "name": "ruff"

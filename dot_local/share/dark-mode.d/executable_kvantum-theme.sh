@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-kvantummanager --set catppuccin-frappe-blue
+sed -i 's/latte/frappe/' ~/.config/Kvantum/kvantum.kvconfig

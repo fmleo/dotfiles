@@ -51,6 +51,7 @@
 
 /* right base stuff */
 #idle_inhibitor,
+#custom-darkman,
 #pulseaudio,
 #clock,
 #tray,
@@ -77,6 +78,12 @@
     color: @red;
 }
 /* end idle_inhibitor */
+
+/* start darkman */
+#custom-darkman {
+    padding-left: 1.5rem;
+}
+/* end darkman */
 
 /* start clock */
 

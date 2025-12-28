@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "soft_wrap": "editor_width",
   "icon_theme": "Catppuccin Frappé",
   "edit_predictions": {
     "mode": "subtle",
@@ -17,10 +18,10 @@
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro"
+      "provider": "ollama",
+      "model": "qwen2.5:1.5b"
     },
     "model_parameters": []
   },
@@ -76,6 +77,9 @@
     "C": {
       "show_edit_predictions": false,
       "tab_size": 2
+    },
+    "Django": {
+      "language_servers": ["emmet-language-server"]
     }
   },
 

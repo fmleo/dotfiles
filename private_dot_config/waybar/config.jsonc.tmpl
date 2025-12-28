@@ -116,14 +116,15 @@
     },
   },
   "custom/darkman": {
-    "exec": "darkman get",
+    "exec": "darkman get | jq --unbuffered --compact-output -R '{alt: .}'",
+    "return-type": "json",
     "interval": 1,
     "format": "{icon}",
     "on-click": "darkman toggle",
     "format-icons": {
       "dark": "",
-      "light": ""
-    }
-  }
+      "light": "",
+    },
+  },
 }
 

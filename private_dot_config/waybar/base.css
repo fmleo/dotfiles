@@ -97,6 +97,10 @@
 #battery.critical {
     color: @red;
 }
+
+#battery.charging {
+    color: @green
+}
 /* end battery */
 
 #custom-power {
